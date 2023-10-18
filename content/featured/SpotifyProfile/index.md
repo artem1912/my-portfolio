@@ -1,15 +1,15 @@
 ---
 date: '2'
-title: 'Spotify Profile'
+title: 'Virtual Exhibition'
 cover: './demo.png'
 github: 'https://github.com/bchiang7/spotify-profile'
-external: 'https://spotify-profile.herokuapp.com/'
+external: 'https://eventlogistica.com/'
 tech:
   - React
-  - Styled Components
+  - Node.js
   - Express
-  - Spotify API
-  - Heroku
+  - 3rd party Integration
+  - Three.js
 ---
 
-A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.
+A web app for visualizing virtual exhibition. Show your fairstands with top products, billborads, brochures, and contact informations about support. Video conference and trading feature were implemented.
