@@ -104,11 +104,14 @@ const Hero = () => {
       ) : (
         <TransitionGroup component={null}>
           {isMounted &&
-            items.map((item, i) => (
-              <CSSTransition key={i} classNames="fadeup" timeout={loaderDelay}>
-                <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
-              </CSSTransition>
-            ))}
+            items.map((item, i) => {
+              const styleTransition = { transitionDelay: `${i + 1}00ms` };
+              return (
+                <CSSTransition key={i} classNames="fadeup" timeout={loaderDelay}>
+                  <div style={styleTransition}>{item}</div>
+                </CSSTransition>
+              );
+            })}
         </TransitionGroup>
       )}
     </StyledHeroSection>

@@ -211,6 +211,8 @@ const Nav = ({ isHome }) => {
     </a>
   );
 
+  const styleNavLineTransition = { transitionDelay: `${isHome ? navLinks.length * 100 : 0}ms` };
+
   return (
     <StyledHeader scrollDirection={scrollDirection} scrolledToTop={scrolledToTop}>
       <StyledNav>
@@ -247,22 +249,23 @@ const Nav = ({ isHome }) => {
                 <TransitionGroup component={null}>
                   {isMounted &&
                     navLinks &&
-                    navLinks.map(({ url, name }, i) => (
-                      <CSSTransition key={i} classNames={fadeDownClass} timeout={timeout}>
-                        <li key={i} style={{ transitionDelay: `${isHome ? i * 100 : 0}ms` }}>
-                          <Link to={url}>{name}</Link>
-                        </li>
-                      </CSSTransition>
-                    ))}
+                    navLinks.map(({ url, name }, i) => {
+                      const styleTransition = { transitionDelay: `${isHome ? i * 100 : 0}ms` };
+                      return (
+                        <CSSTransition key={i} classNames={fadeDownClass} timeout={timeout}>
+                          <li key={i} style={styleTransition}>
+                            <Link to={url}>{name}</Link>
+                          </li>
+                        </CSSTransition>
+                      );
+                    })}
                 </TransitionGroup>
               </ol>
 
               <TransitionGroup component={null}>
                 {isMounted && (
                   <CSSTransition classNames={fadeDownClass} timeout={timeout}>
-                    <div style={{ transitionDelay: `${isHome ? navLinks.length * 100 : 0}ms` }}>
-                      {ResumeLink}
-                    </div>
+                    <div style={styleNavLineTransition}>{ResumeLink}</div>
                   </CSSTransition>
                 )}
               </TransitionGroup>

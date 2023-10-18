@@ -109,7 +109,7 @@ const Footer = () => {
           <div>Designed &amp; Built by Artem Savchuk</div>
 
           {githubInfo.stars && githubInfo.forks && (
-            <div className="github-stats" style="display: none">
+            <div className="github-stats" style={{ display: 'none' }}>
               <span>
                 <Icon name="Star" />
                 <span>{githubInfo.stars.toLocaleString()}</span>
