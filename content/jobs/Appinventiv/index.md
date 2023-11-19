@@ -4,7 +4,7 @@ title: 'Mobile App Developer'
 company: 'Appinventiv'
 location: 'UAE'
 range: 'April 2022 - July 2022'
-url: 'https://github.com/artem1912/fitness-social'
+url: 'https://github.com/niris1912/fitness-social'
 ---
 
 - Material mobile UI/UX design.

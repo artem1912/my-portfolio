@@ -2,10 +2,10 @@ const config = require('./src/config');
 
 module.exports = {
   siteMetadata: {
-    title: 'Artem Savchuk',
+    title: 'Petro Hadzheha',
     description:
-      'Artem Savchuk is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences.',
-    siteUrl: 'https://brittanychiang.com', // No trailing slash allowed!
+      'Petro Hadzheha is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences.',
+    siteUrl: 'https://portfolio-as.com', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@bchiang7',
   },
@@ -20,8 +20,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Artem Savchuk',
-        short_name: 'Artem Savchuk',
+        name: 'Petro Hadzheha',
+        short_name: 'Petro Hadzheha',
         start_url: '/',
         background_color: config.colors.darkNavy,
         theme_color: config.colors.navy,
